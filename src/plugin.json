@@ -1,7 +1,7 @@
 {
   "type": "panel",
-  "name": "Simple Panel",
-  "id": "myorgid-simple-panel",
+  "name": "React MapBox Panel",
+  "id": "my-react-mapbox-panel",
 
   "info": {
     "description": "Simple React Panel",
