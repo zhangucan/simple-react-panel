@@ -11,6 +11,7 @@
   "author": "Grafana Labs",
   "license": "Apache-2.0",
   "dependencies": {
+    "@danmarshall/deckgl-typings": "^2.2.1",
     "d3-request": "^1.0.5",
     "deck.gl": "^7.1.10",
     "mapbox-gl": "^1.2.0",
