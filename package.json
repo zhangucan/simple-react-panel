@@ -12,17 +12,18 @@
   "license": "Apache-2.0",
   "dependencies": {
     "d3-request": "^1.0.5",
-    "deck.gl": "^7.1.0",
+    "deck.gl": "^7.1.10",
     "mapbox-gl": "^1.2.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "react-map-gl": "^5.0.0"
+    "react-map-gl": "^5.0.7"
   },
   "devDependencies": {
     "@grafana/data": "latest",
     "@grafana/toolkit": "next",
     "@grafana/ui": "latest",
     "@types/mapbox-gl": "^0.54.1",
+    "@types/react-map-gl": "^5.0.0",
     "react-mapbox-gl": "^4.6.0"
   }
 }
