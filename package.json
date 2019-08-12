@@ -12,6 +12,10 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@danmarshall/deckgl-typings": "^2.2.1",
+    "@deck.gl/core": "^7.2.0",
+    "@deck.gl/geo-layers": "^7.2.0",
+    "@deck.gl/layers": "^7.2.0",
+    "@deck.gl/mapbox": "^7.2.0",
     "d3-request": "^1.0.5",
     "deck.gl": "^7.1.10",
     "mapbox-gl": "^1.2.0",
@@ -23,6 +27,7 @@
     "@grafana/data": "latest",
     "@grafana/toolkit": "next",
     "@grafana/ui": "latest",
+    "@types/hammerjs": "^2.0.36",
     "@types/mapbox-gl": "^0.54.1",
     "@types/react-map-gl": "^5.0.0",
     "react-mapbox-gl": "^4.6.0"

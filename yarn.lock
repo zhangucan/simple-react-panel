@@ -697,10 +697,34 @@
     seer "^0.2.4"
     viewport-mercator-project "^6.1.0"
 
+"@deck.gl/core@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@deck.gl/core/-/core-7.2.0.tgz#0a35860e95c60dfc772b466c00671f81b434ec0f"
+  integrity sha512-rfkdUAQmPSpb18GUg6ixK8OWT+FhrzG1nZhiV2Zswt01nbvQX0fG4PhZHUECeiRis+B29ndx68wCSvZVnpun5g==
+  dependencies:
+    "@loaders.gl/core" "^1.2.0-beta.4"
+    "@loaders.gl/images" "^1.2.0-beta.4"
+    "@luma.gl/core" "^7.2.0"
+    gl-matrix "^3.0.0"
+    math.gl "^2.3.0"
+    mjolnir.js "^2.1.2"
+    probe.gl "^3.0.2"
+    seer "^0.2.4"
+    viewport-mercator-project "^6.1.0"
+
 "@deck.gl/geo-layers@7.1.10":
   version "7.1.10"
   resolved "https://registry.npmjs.org/@deck.gl/geo-layers/-/geo-layers-7.1.10.tgz#b937293ed06c9370574b4d66b758090e40bd6120"
   integrity sha512-DNG/grLm7l2xiAg7FSbMFAwX+j6JCGGZ4M+gOE1U7NVzyYfDg//8vYNMhsMFGYFMigpTiJQmAd0qLCSHws+A7g==
+  dependencies:
+    h3-js "^3.4.3"
+    long "^3.2.0"
+    s2-geometry "^1.2.10"
+
+"@deck.gl/geo-layers@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@deck.gl/geo-layers/-/geo-layers-7.2.0.tgz#748652d6c3caef66fece7888f401006d37c42bae"
+  integrity sha512-ltSlHDAseKVvzNKXpTSglM6Nk6uhh+wmZjWdwGAV62mICDn1URQN2LC48JePVoBbIwiWxEO1jpef7v+GrW9ETA==
   dependencies:
     h3-js "^3.4.3"
     long "^3.2.0"
@@ -728,10 +752,24 @@
     "@mapbox/tiny-sdf" "^1.1.0"
     earcut "^2.0.6"
 
+"@deck.gl/layers@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@deck.gl/layers/-/layers-7.2.0.tgz#4b16d52b6800f05aa4327ae20b6668a880e94dbf"
+  integrity sha512-VoRqIffk9v4wqDoHRzP7BJST80fjM6R5ucJaxc6n4aTjCDv+WloClL9z2tJBfwmv3g7hBw1xGbWSFfEYC4GR5A==
+  dependencies:
+    "@loaders.gl/images" "^1.2.0-beta.4"
+    "@mapbox/tiny-sdf" "^1.1.0"
+    earcut "^2.0.6"
+
 "@deck.gl/mapbox@7.1.10":
   version "7.1.10"
   resolved "https://registry.npmjs.org/@deck.gl/mapbox/-/mapbox-7.1.10.tgz#f0821a8eeba55f01278e5618b8268fafcd0d0448"
   integrity sha512-Pd+7AoUeXPCExVc+42JW44pSZqQpXOWt+qpapNdz3cNCkrACznnA2nY9pRTJ3F1RsFWbYvg2cxkMUtcyxtNohg==
+
+"@deck.gl/mapbox@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@deck.gl/mapbox/-/mapbox-7.2.0.tgz#2d4d4c2597f211f7ba82f05ebce95e8524cc8682"
+  integrity sha512-/0ayhDbnM+V3hx94M1afA+2mHvZePXQYIZrS6drUefzR+jhzpVF6qMjLtRPtMH4BbI71a2vHR6L+wFjXhvtvkg==
 
 "@deck.gl/mesh-layers@7.1.10":
   version "7.1.10"
@@ -1085,15 +1123,32 @@
   dependencies:
     "@babel/runtime" "^7.3.1"
 
+"@loaders.gl/core@^1.2.0-beta.4":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@loaders.gl/core/-/core-1.2.1.tgz#77c2ac33d935429dc37419754ab3ec1fd0c45fda"
+  integrity sha512-D+KdCQSKMhnReC3gNSdjNs2sQrm7SviEbu68mD93k4VqCyNg9/5AHY9FAK6P6SQkau0GAJ0zXIJ/GIxxuOLNoQ==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+
 "@loaders.gl/images@^1.0.3":
   version "1.1.6"
   resolved "https://registry.npmjs.org/@loaders.gl/images/-/images-1.1.6.tgz#21dd3238c97ad1164f7c0ed43d18edaec49d97e1"
   integrity sha512-Ad63Uj0VGzmA71ucThnyc+VYsJJKZqYKkmANsQDDFe8p9UiR8JaI8DNLTJCfEtusyl5KVBWzWIdqXGPoT2uLWA==
 
+"@loaders.gl/images@^1.2.0-beta.4":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@loaders.gl/images/-/images-1.2.1.tgz#558b45fdeb55f783acf4d34b3df5fc974d8efa6d"
+  integrity sha512-Ec/UAqfsQifdQjUdW2yvLf0KyHAwv6Ej4xEKyIC6JWD6KE2Z1hfAKrwdhIsiLBPHIonvxy41jSuVEJeoVYonEA==
+
 "@luma.gl/constants@7.1.1":
   version "7.1.1"
   resolved "https://registry.npmjs.org/@luma.gl/constants/-/constants-7.1.1.tgz#f966fad9069722974e1b7bcae2fcd7a2444090dc"
   integrity sha512-F+lkZzMJNPvGeTCkOezyHafAb48ottMx10PYx3j1rsKFBM2v1LgBHnV1I37xjkrx8PMhdb/2zMg80nRrniudGw==
+
+"@luma.gl/constants@7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@luma.gl/constants/-/constants-7.2.0.tgz#0fbc4aa07839e6e0454f80658a4e361b855deb67"
+  integrity sha512-VQFdTM3N8pxFLfjpLq5vO3CBVcbvyRKseTZ8zmkMFL3uCYrorE9v32vDHW+3hABaYaQc/Xw4J1mOrtyfzKtv3w==
 
 "@luma.gl/core@^7.1.0":
   version "7.1.1"
@@ -1110,10 +1165,33 @@
     probe.gl "^3.0.2"
     seer "^0.2.4"
 
+"@luma.gl/core@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@luma.gl/core/-/core-7.2.0.tgz#fc8556ce7c9afe4a352cc795783fac501a2f1e01"
+  integrity sha512-KbsgopiE62suHedDjUY7to6o9IdJA0dnE2aqDIk2uKcY0OcMWsoZGh25Y0N66Ouvy0sxAg/6dlS1v3qoLDcVyA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@luma.gl/constants" "7.2.0"
+    "@luma.gl/shadertools" "7.2.0"
+    "@luma.gl/webgl" "7.2.0"
+    "@luma.gl/webgl-state-tracker" "7.2.0"
+    "@luma.gl/webgl2-polyfill" "7.2.0"
+    math.gl "^2.3.0"
+    probe.gl "^3.0.2"
+    seer "^0.2.4"
+
 "@luma.gl/shadertools@7.1.1":
   version "7.1.1"
   resolved "https://registry.npmjs.org/@luma.gl/shadertools/-/shadertools-7.1.1.tgz#084f6bd18632784ef20d20c4265a167179da6336"
   integrity sha512-Mr+6LiMUGfnrD9wYEQBa51Far3G33wxNXbl6kGHq4wgyewlpAHPfTuzqLig2o44G7VvGm/BCCAjvr6yXeluUIw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    math.gl "^2.3.0"
+
+"@luma.gl/shadertools@7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@luma.gl/shadertools/-/shadertools-7.2.0.tgz#3a56e243195ddbe3ab92028163a8a86d0f104477"
+  integrity sha512-j4Bmc3fNTewi2El0xT/0hm5woLxKs635OJMuql8geznuXTEeWdxRziATN+ouhe1VbFTjjbu/L3CCYGrpiKZSjQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     math.gl "^2.3.0"
@@ -1126,6 +1204,14 @@
     "@babel/runtime" "^7.0.0"
     "@luma.gl/constants" "7.1.1"
 
+"@luma.gl/webgl-state-tracker@7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@luma.gl/webgl-state-tracker/-/webgl-state-tracker-7.2.0.tgz#dff5a64934663fc8f3508cff16703efcecff467b"
+  integrity sha512-RKiE0ksGTaPt+FmJA4iGKsPP9uYvqIr/auB0oZUKa4dNq8EqnvlhNSqpkkJrM9ZIuUreWuCQvDZYCU9rgTyrvw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@luma.gl/constants" "7.2.0"
+
 "@luma.gl/webgl2-polyfill@7.1.1":
   version "7.1.1"
   resolved "https://registry.npmjs.org/@luma.gl/webgl2-polyfill/-/webgl2-polyfill-7.1.1.tgz#ae75512e01e3ccf4cf675f87cdaf238afe7f8267"
@@ -1133,6 +1219,14 @@
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@luma.gl/constants" "7.1.1"
+
+"@luma.gl/webgl2-polyfill@7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@luma.gl/webgl2-polyfill/-/webgl2-polyfill-7.2.0.tgz#9393a60a72875a18ef93da1932702f75fae9be8a"
+  integrity sha512-al/o8RyBhcK3a1RL0JsCvQXbl6QMmx6qazOOKNiRuHhFTa6H1Gh8Z6XcelT1F2dB6ys68/6Cg/QfAcAvwQlVyw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@luma.gl/constants" "7.2.0"
 
 "@luma.gl/webgl@7.1.1":
   version "7.1.1"
@@ -1143,6 +1237,17 @@
     "@luma.gl/constants" "7.1.1"
     "@luma.gl/webgl-state-tracker" "7.1.1"
     "@luma.gl/webgl2-polyfill" "7.1.1"
+    probe.gl "^3.0.2"
+
+"@luma.gl/webgl@7.2.0":
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/@luma.gl/webgl/-/webgl-7.2.0.tgz#5eab507b7705a37ff117254cc7ed52a1f160d6e6"
+  integrity sha512-4KrhxZpGIZfIeBbGV1eyA0AJSwu72SgPiF+DWOm7KByK76pYTBSJviHxFAJtLxIoCkp1kgH7jQ/TCzLkg8GOeQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@luma.gl/constants" "7.2.0"
+    "@luma.gl/webgl-state-tracker" "7.2.0"
+    "@luma.gl/webgl2-polyfill" "7.2.0"
     probe.gl "^3.0.2"
 
 "@mapbox/geojson-area@0.2.2":
