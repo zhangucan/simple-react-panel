@@ -45,6 +45,7 @@ declare module 'deck.gl' {
 		LinearInterpolator,
 		FlyToInterpolator,
 		// Effects
+		LightingEffect,
 		_EffectManager,
 		_Effect,
 		_ReflectionEffect

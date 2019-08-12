@@ -218,6 +218,29 @@ declare module '@deck.gl/core/shaderlib/lighting/lighting' {
 	};
 
 }
+declare module '@deck.gl/core/shaderlib/lighting/lighting-effect' {
+	import Effect from '@deck.gl/core/experimental/lib/effect';
+	export default class LightingEffect extends Effect {
+		constructor(props);
+	
+		getParameters(layer: any): any
+	
+		// Private
+		applyDefaultLights(): void
+	
+		getProjectedPointLights(layer: any): any [];
+	
+		getProjectedDirectionalLights(layer: any): any [];
+	}
+}
+
+declare module '@deck.gl/core/effects/lighting/point-light' {
+	import {PointLight as BasePointLight} from 'luma.gl';
+	export default class PointLight extends BasePointLight {
+		constructor(props);
+		getProjectedLight(any): any
+	}
+}
 declare module 'shaderlib' {
 	import { fp32, fp64, picking } from 'luma.gl';
 	import project from '@deck.gl/core/shaderlib/project/project';
@@ -2224,6 +2247,8 @@ declare module '@deck.gl/core' {
 	export { default as project } from '@deck.gl/core/shaderlib/project/project';
 	export { default as project64 } from '@deck.gl/core/shaderlib/project64/project64';
 	export { default as lighting } from '@deck.gl/core/shaderlib/lighting/lighting';
+	export { default as PointLight } from '@deck.gl/core/effects/lighting/point-light';
+	export { default as LightingEffect } from '@deck.gl/core/shaderlib/lighting/lighting-effect';
 	export { default as View } from '@deck.gl/core/views/view';
 	export { default as MapView } from '@deck.gl/core/views/map-view';
 	export { default as FirstPersonView } from '@deck.gl/core/views/first-person-view';

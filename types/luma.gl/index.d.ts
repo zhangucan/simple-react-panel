@@ -1000,6 +1000,9 @@ declare module 'luma.gl/webgl/clear' {
 	}): void;
 
 }
+declare module 'luma.gl/webgl/utils/utils' {
+	export function uid(id = 'id'): string
+}
 declare module 'luma.gl/webgl-utils/format-utils' {
 	export function glFormatToComponents(format: any): 0 | 1 | 2 | 3 | 4;
 	export function glTypeToBytes(type: any): 0 | 1 | 2 | 4;
@@ -1499,6 +1502,24 @@ declare module 'luma.gl/core/object-3d' {
 		transform(): this;
 	}
 
+}
+declare module 'luma.gl/core/lighting/light-source' {
+	class Light {
+		constructor(props = {});
+	}
+	
+	export class AmbientLight extends Light {
+		constructor(props = {});
+	}
+	
+	export class DirectionalLight extends Light {
+		constructor(props = {});
+	}
+	
+	export class PointLight extends Light {
+		constructor(props = {});
+		_getAttenuation(props: any): number[]
+	}
 }
 declare module 'luma.gl/core/group' {
 	import Object3D from 'luma.gl/core/object-3d';
@@ -2225,6 +2246,20 @@ declare module 'luma.gl/core/animation-loop-proxy' {
 	}
 
 }
+
+declare module 'luma.gl/materials/material' {
+	export default class Material {}
+}
+
+declare module 'luma.gl/materials/phong-material' {
+	import Material from 'luma.gl/materials/material';
+	export class PhongMaterial extends Material {
+		constructor(props: any);
+	}
+
+}
+
+
 declare module 'luma.gl/multipass/pass' {
 	export default class Pass {
 		constructor(gl: any, props: any);
@@ -2557,6 +2592,8 @@ declare module 'luma.gl/shadertools/src/modules/pbr/pbr' {
 
 }
 declare module 'luma.gl' {
+	export {AmbientLight, DirectionalLight, PointLight} from 'luma.gl/core/lighting/light-source';
+	export {PhongMaterial} from 'luma.gl/materials/phong-material';
 	export { isWebGL, isWebGL2 } from 'luma.gl/webgl-utils/webgl-checks';
 	export { getKeyValue, getKey } from 'luma.gl/webgl-utils/constants-to-keys';
 	export { createGLContext, destroyGLContext, resizeGLContext, pollGLContext, setContextDefaults } from 'luma.gl/webgl-context/context';
