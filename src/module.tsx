@@ -41,8 +41,8 @@ const material = new PhongMaterial({
 });
 
 const INITIAL_VIEW_STATE = {
-  longitude: -1.4157267858730052,
-  latitude: 52.232395363869415,
+  longitude: 117.19940185546875,
+  latitude: 29.30484962463379,
   zoom: 6.6,
   minZoom: 5,
   maxZoom: 15,
@@ -99,13 +99,26 @@ export class MyPanel extends PureComponent<Props> {
 
   _renderLayers() {
     const { radius = 1000, upperPercentile = 100, coverage = 1 } = this.props;
-    const data: any = [[-0.198465, 51.505538]];
+    const data = this.props.data;
+    const coordinate = [];
+    for (const item of data.series) {
+      if (item.rows[0]) {
+        const row = item.rows[0];
+        if (row[0]) {
+          const gson = JSON.parse(row[0]);
+          if (gson.wgs84Lng && gson.wgs84Lat) {
+            coordinate.push([Number(gson.wgs84Lng), Number(gson.wgs84Lat)]);
+          }
+        }
+      }
+    }
+    console.log(coordinate);
     return [
       new HexagonLayer({
         id: 'heatmap',
         colorRange,
         coverage,
-        data,
+        data: coordinate,
         // elevationRange: [0, 3000],
         elevationScale: this.state.elevationScale,
         extruded: true,
