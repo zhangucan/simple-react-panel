@@ -1,10 +1,10 @@
 {
   "type": "panel",
-  "name": "React MapBox Panel",
-  "id": "my-react-mapbox-panel",
+  "name": "Heatmap For EBike",
+  "id": "heatmap4ebike",
 
   "info": {
-    "description": "Simple React Panel",
+    "description": "Heatmap For EBike",
     "author": {
       "name": "Your Name"
     },
