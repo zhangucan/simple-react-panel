@@ -41,11 +41,11 @@ const material = new PhongMaterial({
 });
 
 const INITIAL_VIEW_STATE = {
-  longitude: 117.19940185546875,
-  latitude: 29.30484962463379,
-  zoom: 6.6,
+  longitude: 104.50704956054688,
+  latitude: 28.168500900268555,
+  zoom: 12,
   minZoom: 5,
-  maxZoom: 15,
+  maxZoom: 20,
   pitch: 40.5,
   bearing: -27.396674584323023,
 };
@@ -98,7 +98,7 @@ export class MyPanel extends PureComponent<Props> {
   }
 
   _renderLayers() {
-    const { radius = 1000, upperPercentile = 100, coverage = 1 } = this.props;
+    const { radius = 50, upperPercentile = 100, coverage = 0.7 } = this.props;
     const data = this.props.data;
     const coordinate = [];
     for (const item of data.series) {
@@ -119,7 +119,7 @@ export class MyPanel extends PureComponent<Props> {
         colorRange,
         coverage,
         data: coordinate,
-        // elevationRange: [0, 3000],
+        elevationRange: [0, 3000],
         elevationScale: this.state.elevationScale,
         extruded: true,
         getPosition: (d: any) => d,
@@ -134,7 +134,7 @@ export class MyPanel extends PureComponent<Props> {
   }
 
   render() {
-    const { mapStyle = 'mapbox://styles/mapbox/dark-v9' } = this.props;
+    const { mapStyle = 'mapbox://styles/mapbox/navigation-guidance-night-v2' } = this.props;
 
     return (
       <DeckGL layers={this._renderLayers()} effects={[lightingEffect]} initialViewState={INITIAL_VIEW_STATE} controller={true}>
