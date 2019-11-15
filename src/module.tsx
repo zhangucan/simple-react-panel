@@ -3,7 +3,7 @@ import { PanelProps, PanelPlugin } from '@grafana/ui';
 import { StaticMap } from 'react-map-gl';
 import DeckGL, { LightingEffect, HexagonLayer } from 'deck.gl';
 import { PhongMaterial, AmbientLight } from 'luma.gl';
-import { PointLight } from '@deck.gl/core';
+import { PointLight, OrthographicView } from '@deck.gl/core';
 export interface Props extends PanelProps {
   radius?: number;
   upperPercentile?: number;
@@ -74,6 +74,10 @@ export class MyPanel extends PureComponent<Props> {
     this._stopAnimate();
   }
 
+  _onViewStateChange({ viewState }: { viewState: any }) {
+    this.setState({ viewState });
+  }
+
   _animate() {
     this._stopAnimate();
 
@@ -135,9 +139,20 @@ export class MyPanel extends PureComponent<Props> {
 
   render() {
     const { mapStyle = 'mapbox://styles/mapbox/navigation-guidance-night-v2' } = this.props;
-
+    console.log('this.props', this.props);
     return (
-      <DeckGL layers={this._renderLayers()} effects={[lightingEffect]} initialViewState={INITIAL_VIEW_STATE} controller={true}>
+      <DeckGL
+        viewState={{
+          target: [0, 0, 0],
+          rotationX: 0,
+          rotationOrbit: 0,
+        }}
+        views={[new OrthographicView()]}
+        layers={this._renderLayers()}
+        effects={[lightingEffect]}
+        initialViewState={INITIAL_VIEW_STATE}
+        controller={true}
+      >
         <StaticMap width="100%" height="100%" reuseMaps mapStyle={mapStyle} preventStyleDiffing={true} mapboxApiAccessToken={MAPBOX_TOKEN} />
       </DeckGL>
     );
