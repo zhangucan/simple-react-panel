@@ -140,6 +140,8 @@ export class MyPanel extends PureComponent<Props> {
   render() {
     const { mapStyle = 'mapbox://styles/mapbox/navigation-guidance-night-v2' } = this.props;
     console.log('this.props', this.props);
+    console.log('this.refs', this.refs);
+    console.log('this.context', this.context);
     return (
       <DeckGL
         viewState={{
