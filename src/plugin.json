@@ -1,7 +1,7 @@
 {
   "type": "panel",
   "name": "Heatmap For EBike",
-  "id": "heatmap4ebike",
+  "id": "simple4test",
 
   "info": {
     "description": "Heatmap For EBike",
