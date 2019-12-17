@@ -1,10 +1,10 @@
 {
   "type": "panel",
-  "name": "Heatmap For EBike",
+  "name": "simple4test",
   "id": "simple4test",
 
   "info": {
-    "description": "Heatmap For EBike",
+    "description": "simple4test",
     "author": {
       "name": "Your Name"
     },
